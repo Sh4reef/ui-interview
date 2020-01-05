@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>UI Interview</title>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="menuicon">
+                <span></span>
+            </div>
+        </header>
+        <section class="summary summary-collapsed">
+            <div class="users">
+                <ul>
+                    <li>
+                        <div class="user">
+                            <div class="avatar-circle" style="background-color: rgba(0, 105, 92, 1)">
+                                <span class=" initials">K</span>
+                            </div>
+                            <p>Keanu Reeves Keanu Reeves</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user">
+                            <div class="avatar-circle" style="background-color: rgba(0, 129, 141, 1);">
+                                <span class=" initials">S</span>
+                            </div>
+                            <p>Sandra Bullock</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user">
+                            <div class="avatar-circle" style="background-color: rgba(16, 76, 144, 1);">
+                                <span class="initials">J</span>
+                            </div>
+                            <p>Johnny Depp</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="user">
+                            <div class="avatar-circle" style="background-color: rgba(1, 19, 113, 1);">
+                                <span class="initials">W</span>
+                            </div>
+                            <p>Winona Ryder</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul class="titles">
+                    <li class="goals">
+                        <div class="title">
+                            <p>Goals</p>
+                        </div>
+                        <ul class="items">
+                            <li>
+                                <p>Goal Selection <img src="img/mark.svg" class="status" alt="mark"></p>
+                            </li>
+                            <li>
+                                <p>Wealth Planner <img src="img/mark.svg" class="status" alt="mark"></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="finances">
+                        <div class="title">
+                            <p>Finances</p>
+                        </div>
+                        <ul class="items">
+                            <li>
+                                <p>Net Worth <img src="img/mark.svg" class="status" alt="mark"></p>
+                            </li>
+                            <li>
+                                <p>Cash Flow <img src="img/mark.svg" class="status" alt="mark"></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="investor">
+                        <div class="title">
+                            <p>Investor Profile</p>
+                        </div>
+                        <ul class="items">
+                            <li>
+                                <p>Profile Details <img src="img/mark.svg" class="status" alt="mark"></p>
+                            </li>
+                            <li>
+                                <p>CKA <img src="img/unmark.svg" class="status" alt="mark"></p>
+                            </li>
+                            <li>
+                                <p>UOB Risk Profile <img src="img/unmark.svg" class="status" alt="mark"></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- reference of this percentage circle https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705 -->
+                <div class="percentage-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <path class="circle-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="68, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="19" y="19.35" class="percentage">68%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="references">
+                <div class="texts">
+                    <p>Justifications</p>
+                    <p>Upload documents</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/link.svg" class="link-icon" alt="link">Market Insights</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/link.svg" class="link-icon" alt="link">Wealth Explorer</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/link.svg" class="link-icon" alt="link">Portfolio (P&nbsp;L)</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/link.svg" class="link-icon" alt="link">Work Tray</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="save-button">
+                    <a href="#">save and exit</a>
+                </div>
+            </div>
+        </section>
+        <main>
+            <div class="hero">
+                <h1>Understanding <br> Your Goals</h1>
+                <p>
+                    Our unique Risk-First approach optimizes the way you reach financial <br> goals to only take appropriate risks. Once we understand your <br> aspirations, our advice will be tailored to match your needs towards <br> the financial future.
+                </p>
+                <div class="button">
+                    <a href="#">continue</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

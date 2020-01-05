@@ -1,0 +1,19 @@
+The objective of this exercise is to allow us to test how well design is implemented.
+Please find attached the design that needs to be implemented in html / css / javascript
+
+Please use the framework of your choice or go Vanilla JS.
+
+The header has two main states.
+1. Closed (0.1.2 closed)
+2. Opened (0.1.2 expanded)
+
+When the Hamburger icon is clicked the state transitions from Closed to Opened
+When the X icon is clicked, we transition from Opened to Closed.
+
+Please do not use images unless absolutely necessary.
+
+Figma:
+Attached is a .fig file
+Please download Figma and import the .fig file into the program.
+
+If you need any help message Rollen to get more info

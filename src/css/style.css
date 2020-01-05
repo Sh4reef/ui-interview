@@ -1,0 +1,353 @@
+*,
+*::before,
+*::after {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/goal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(30, 34, 39, 0.8);
+    /* background-attachment: fixed; */
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    background-color: #fff;
+    padding: 0 15px;
+    position: fixed;
+    z-index: 4000;
+}
+
+.menuicon {
+    margin: 1em;
+    width: 38px;
+    cursor: pointer;
+}
+
+.menuicon:after,
+.menuicon:before,
+.menuicon span {
+    background-color: #000;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    width: 23px;
+    height: 2px;
+    margin: 6px 0;
+    transition: all .2s ease-in-out;
+}
+
+.menuicon-clicked:before {
+    transform: translateY(8px) rotate(135deg);
+}
+
+.menuicon-clicked:after {
+    transform: translateY(-8px) rotate(-135deg);
+}
+
+.menuicon-clicked span {
+    transform: scale(0);
+}
+
+.menuicon-clicked:before,
+.menuicon-clicked:after,
+.mneuicon-clicked span {
+    background-color: rgba(35, 114, 213, 1);
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 440px;
+    width: 100%;
+    padding: 30px 40px 40px;
+    position: fixed;
+    z-index: 3000;
+    top: 72px;
+    transition: all .2s ease-in-out;
+    overflow-x: auto;
+}
+
+.summary-collapsed {
+    transform: translateY(-440px);
+    transition: all .2s ease-in-out;
+}
+
+.animate {
+    opacity: 1 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.users {
+    width: 33.33%;
+    min-width: 328.36px;
+    max-width: 400px;
+    min-height: 370px;
+    opacity: 0;
+}
+
+.users ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5px 20.5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user p {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.avatar-circle {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.initials {
+    position: relative;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+    width: 71.33%;
+    min-width: 703.28px;
+    min-height: 370px;
+    max-width: 804px;
+    border-left: 1px solid rgba(222, 227, 234, 1);
+    border-right: 1px solid rgba(222, 227, 234, 1);
+    opacity: 0;
+}
+
+.info .titles {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.info .titles>li {
+    border-bottom: 1px solid rgba(222, 227, 234, 1);
+    margin-bottom: 30px;
+}
+
+.info .titles>li:last-child {
+    border-bottom: none;
+}
+
+.goals,
+.finances,
+.investor {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.titles .items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+    font-size: 14px;
+}
+
+.items li {
+    margin-bottom: 25px;
+}
+
+.items .status {
+    float: right;
+}
+
+.percentage-circle {
+    width: 50%;
+    text-align: center;
+}
+
+.circular-chart {
+    max-height: 250px;
+    margin-top: -15px;
+    margin-right: -20px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(234, 236, 237, 1);
+    stroke-width: 1;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.green .circle {
+    stroke: rgba(90, 190, 117, 1);
+}
+
+.percentage {
+    fill: #000;
+    font-family: sans-serif;
+    font-size: 0.2em;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+.references {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33.33%;
+    max-width: 500px;
+    min-width: 328.36px;
+    margin-left: 45px;
+    padding-right: 70px;
+    font-size: 20px;
+    color: rgba(70, 77, 83, 1);
+    opacity: 0;
+}
+
+.references .texts p {
+    margin-bottom: 25px;
+}
+
+.references .links {
+    height: 100%;
+}
+
+.references .links ul {
+    list-style: none;
+    font-size: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.links li a {
+    text-decoration: none;
+    color: rgba(35, 114, 213, 1);
+    font-weight: 600;
+}
+
+.link-icon {
+    margin-right: 10px;
+}
+
+.save-button {
+    width: 100%;
+}
+
+.save-button a {
+    text-align: center;
+    display: block;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(35, 114, 213, 1);
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(35, 114, 213, 1);
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+
+main {
+    height: 100%;
+}
+
+.hero {
+    padding: 173px 187px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 80px;
+    /* padding: 0 20px; */
+}
+
+.hero p {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 30px 0 70px;
+}
+
+.hero .button {
+    width: 138px;
+    height: 48px;
+}
+
+.hero a {
+    text-align: center;
+    display: block;
+    width: 138px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    background-color: rgba(35, 114, 213, 1);
+    border: 1px solid rgba(35, 114, 213, 1);
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+
+@media only screen and (min-width: 1500px) {
+    .summary {
+        justify-content: center;
+    }
+}
